@@ -49,5 +49,22 @@ public class UserController {
         return userService.saveUser(User);
     }
 
-
+    @GetMapping("/register")
+    public User register(@RequestParam("userName") String userName, @RequestParam("passWord") String passWord
+            , @RequestParam("email") String email, @RequestParam("userType") String userType) {
+        User user =new User();
+        user.setUserName(userName);
+        user.setEmail(email);
+        user.setPassWord(passWord);
+        if(userType.equalsIgnoreCase("customer")){
+            userService.saveCustomer(user);
+        }else if(userType.equalsIgnoreCase("admin")){
+            userService.saveAdmin(user);
+        }else if(userType.equalsIgnoreCase("storeOwner")){
+            userService.saveStoreOwner(user);
+        }else{
+            return null;
+        }
+        return user;
+    }
 }

@@ -45,10 +45,6 @@ public class AdminController {
         return adminService.saveAdmin(savedUser);
     }
 
-
-
-
-
     @GetMapping("/login")
     public Admin login(@RequestParam("userName") String userName, @RequestParam("passWord") String password) {
         User user = userController.login(userName, password);
