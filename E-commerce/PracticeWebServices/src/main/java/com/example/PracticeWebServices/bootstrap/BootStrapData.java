@@ -26,6 +26,7 @@ public class BootStrapData implements CommandLineRunner {
         this.storeOwnerRepository = storeOwnerRepository;
     }
 
+
     @Override
     public void run(String... args) throws Exception {
 
@@ -71,5 +72,6 @@ public class BootStrapData implements CommandLineRunner {
         System.out.println("Customers saved: "+ customerRepository.count() );
         System.out.println("users saved: "+userRepo.count());
         System.out.println("storeOwners saved: "+ storeOwnerRepository.count());
+        System.out.println("objects created");
     }
 }
