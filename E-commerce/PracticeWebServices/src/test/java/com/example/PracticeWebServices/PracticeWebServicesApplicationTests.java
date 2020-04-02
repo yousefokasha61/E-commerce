@@ -9,5 +9,6 @@ class PracticeWebServicesApplicationTests {
 	@Test
 	void contextLoads() {
 	}
+	// Testing the database
 
 }
