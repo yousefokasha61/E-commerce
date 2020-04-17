@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
-public class Admin {
+public class Admin  extends Item{
     @OneToOne
     @JoinColumn(name = "userId",referencedColumnName = "id")
     User user;
