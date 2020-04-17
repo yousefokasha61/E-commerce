@@ -23,8 +23,7 @@ public class BootStrapData implements CommandLineRunner {
         this.adminRepository = adminRepository;
         this.storeOwnerRepository = storeOwnerRepository;
     }
-
-
+    
     @Override
     public void run(String... args) throws Exception {
 
