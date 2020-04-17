@@ -13,3 +13,4 @@ public interface AddressService {
 
     public List<Address> findAllAddresses();
 }
+
