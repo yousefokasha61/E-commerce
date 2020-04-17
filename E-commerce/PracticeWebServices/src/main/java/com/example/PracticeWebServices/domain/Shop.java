@@ -16,5 +16,4 @@ public class Shop {
     @NotNull(message = "please Enter Shop name !")
     String Shopname ;
 
-
 }
