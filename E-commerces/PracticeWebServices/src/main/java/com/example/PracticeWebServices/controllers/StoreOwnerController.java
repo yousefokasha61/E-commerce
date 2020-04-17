@@ -8,11 +8,13 @@ import com.example.PracticeWebServices.domain.StoreOwner;
 import com.example.PracticeWebServices.domain.User;
 import com.example.PracticeWebServices.service.StoreOwnerService;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@Validated
 @RequestMapping(StoreOwnerController.BASE_URL)
 public class StoreOwnerController {
 

@@ -29,4 +29,7 @@ public class ShopServiceImpl implements ShopService {
     public List<Shop> findAllShops() {
         return shopRepository.findAll();
     }
+
+
+
 }

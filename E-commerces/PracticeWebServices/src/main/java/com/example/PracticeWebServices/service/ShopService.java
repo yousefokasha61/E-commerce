@@ -9,7 +9,8 @@ public interface ShopService {
 
    // public Shop findByStoreOwner_Id(Integer id);
 
-    public Shop findShopById(Integer id);
+     Shop findShopById(Integer id);
 
-    public List<Shop> findAllShops();
+     List<Shop> findAllShops();
+
 }

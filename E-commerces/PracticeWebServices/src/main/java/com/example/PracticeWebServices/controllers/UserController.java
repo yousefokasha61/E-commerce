@@ -4,11 +4,13 @@ import com.example.PracticeWebServices.domain.User;
 import com.example.PracticeWebServices.service.UserService;
 import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@Validated
 @RequestMapping(UserController.BASE_URL)
 public class UserController {
 
@@ -49,5 +51,22 @@ public class UserController {
         return userService.saveUser(User);
     }
 
-
+    @GetMapping("/register")
+    public User register(@RequestParam("userName") String userName, @RequestParam("passWord") String passWord
+            , @RequestParam("email") String email, @RequestParam("userType") String userType) {
+        User user =new User();
+        user.setUserName(userName);
+        user.setEmail(email);
+        user.setPassWord(passWord);
+        if(userType.equalsIgnoreCase("customer")){
+            userService.saveCustomer(user);
+        }else if(userType.equalsIgnoreCase("admin")){
+            userService.saveAdmin(user);
+        }else if(userType.equalsIgnoreCase("storeOwner")){
+            userService.saveStoreOwner(user);
+        }else{
+            return null;
+        }
+        return user;
+    }
 }

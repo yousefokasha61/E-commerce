@@ -1,5 +1,6 @@
 package com.example.PracticeWebServices.bootstrap;
 
+import com.example.PracticeWebServices.Configuration.SecurityConfig;
 import com.example.PracticeWebServices.domain.Admin;
 import com.example.PracticeWebServices.domain.Customer;
 import com.example.PracticeWebServices.domain.StoreOwner;
@@ -77,3 +78,4 @@ public class BootStrapData implements CommandLineRunner {
 
     }
 }
+

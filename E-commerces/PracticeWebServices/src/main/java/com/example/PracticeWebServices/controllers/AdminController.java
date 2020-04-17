@@ -6,11 +6,13 @@ import com.example.PracticeWebServices.domain.User;
 import com.example.PracticeWebServices.service.AdminService;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@Validated
 @RequestMapping(AdminController.BASE_URL)
 public class AdminController {
 
@@ -44,10 +46,6 @@ public class AdminController {
         User savedUser = userController.saveUser(user);
         return adminService.saveAdmin(savedUser);
     }
-
-
-
-
 
     @GetMapping("/login")
     public Admin login(@RequestParam("userName") String userName, @RequestParam("passWord") String password) {
