@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
-public class StoreOwner {
+public class StoreOwner extends Item{
 
     @OneToOne
     @JoinColumn(name = "userId",referencedColumnName = "id")

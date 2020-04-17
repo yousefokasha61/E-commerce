@@ -12,7 +12,7 @@ import java.util.Date;
 
 @Data
 @Entity
-public class User {
+public class User extends Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonIgnore
